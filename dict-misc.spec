@@ -3,13 +3,14 @@ Summary:	Miscellaneous dictionaries for DICTD
 Summary(pl):	R騜ne s這wniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	10
+Release:	11
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
 Source1:	http://dsl.org/faq/fjd/journo-1.1.tar.gz
 Source2:	http://wiretap.area.com/Gopher/Library/Classic/devils.txt
 Source3:	http://ptm.linux.pl/slownik
+Source4:	http://www.prime-project.org/dict/dict-world02--2003-02-15.tar.gz
 URL:		http://www.dict.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -139,23 +140,25 @@ Manuali for use by the dicitonary server in the dictd package.
 Ten pakiet zawiera s這wnik Projektu T逝maczenia Manuali, do u篡cia z
 serwerem dictd.
 
-%package -n dict-world95
-Summary:	world95 dictionary for DICTD
-Summary(pl):	S這wnik world95 dla dictd
+%package -n dict-CIAworldbook
+Summary:	CIAworldbook dictionary for DICTD
+Summary(pl):	S這wnik CIAworldbook dla dictd
 Group:		Applications/Dictionaries
 Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
+Obsoletes:  dict-world95
+# ulr: http://www.prime-project.org/dict/
 
-%description -n dict-world95
-This package contains The 1995 CIA World Factbook for use by the
+%description -n dict-CIAworldbook
+This package contains The 2002 CIA World Factbook for use by the
 dictionary server in the dictd package.
 
-%description -n dict-world95 -l pl
-Ten pakiet zawiera s這wnik The 1995 CIA World Factbook do u篡wania z
+%description -n dict-CIAworldbook -l pl
+Ten pakiet zawiera s這wnik The 2002 CIA World Factbook do u篡wania z
 serwerem s這wnika dictd.
 
 %prep
-%setup -q -a1
+%setup -q -a1 -a4
 cp %{SOURCE2} ./
 cp %{SOURCE3} ./
 
@@ -182,16 +185,21 @@ egrep -v "^#" slownik | tr -d \[\] | \
 	-s "Projekt Tlumaczenia Manuali" ptm
 dictzip ptm.dict
 
+cd world02-2003-02-15
+dictzip world02.dict
+cd ..
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_datadir}/dictd/,%{_sysconfdir}/dictd,%{_bindir}}
 %{__make} install dictdir=$RPM_BUILD_ROOT%{_datadir}/dictd
 install ptm.* journo.* devil.* $RPM_BUILD_ROOT%{_datadir}/dictd
+install world02-2003-02-15/world02.* $RPM_BUILD_ROOT%{_datadir}/dictd
 
 # jargon has separate package
 rm -f $RPM_BUILD_ROOT%{_datadir}/dictd/jargon.*
 
-for i in easton elements foldoc hitchcock world95 journo ptm devil; do
+for i in easton elements foldoc hitchcock world02 journo ptm devil; do
 dictprefix=%{_datadir}/dictd/$i
 echo "# Misc Dictionaries - $i
 database $i {
@@ -273,12 +281,12 @@ if [ -f /var/lock/subsys/dictd ]; then
 	/etc/rc.d/init.d/dictd restart 1>&2
 fi
 
-%post -n dict-world95
+%post -n dict-CIAworldbook
 if [ -f /var/lock/subsys/dictd ]; then
 	/etc/rc.d/init.d/dictd restart 1>&2
 fi
 
-%postun -n dict-world95
+%postun -n dict-CIAworldbook
 if [ -f /var/lock/subsys/dictd ]; then
 	/etc/rc.d/init.d/dictd restart 1>&2 || true
 fi
@@ -318,7 +326,7 @@ fi
 %attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/ptm.dictconf
 %{_datadir}/dictd/ptm.*
 
-%files -n dict-world95
+%files -n dict-CIAworldbook
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/world95.dictconf
-%{_datadir}/dictd/world95.*
+%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/world02.dictconf
+%{_datadir}/dictd/world02.*
