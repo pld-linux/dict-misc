@@ -1,9 +1,9 @@
 %define		dictname misc
-Summary:	misc dictionaries for DICTD
+Summary:	Miscellaneous dictionaries for DICTD
 Summary(pl):	Ró¿ne s³owniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	7
+Release:	8
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -175,9 +175,9 @@ dictzip devil.dict
 
 egrep -v "^#" slownik > slownik.1
 tr -d \[\] <slownik.1 > slownik.2
-tr  êó±¶³¿¼æñ eoaslzzcn <slownik.2 > slownik.3
-sed  -e 's/^\([[:alnum:]]\{2,\}\)\ \ /:\1:/' < slownik.3 > slownik.4
-./dictfmt -j -u "http://ptm.linux.pl/slownik" -s "Projek Tlumaczenia Manuali" ptm  < slownik.4
+tr êó±¶³¿¼æñ eoaslzzcn <slownik.2 > slownik.3
+sed -e 's/^\([[:alnum:]]\{2,\}\)\ \ /:\1:/' < slownik.3 > slownik.4
+./dictfmt -j -u "http://ptm.linux.pl/slownik" -s "Projek Tlumaczenia Manuali" ptm < slownik.4
 dictzip ptm.dict
 
 %install
@@ -263,12 +263,12 @@ fi
 
 %post -n dict-ptm
 if [ -f /var/lock/subsys/dictd ]; then
-    /etc/rc.d/init.d/dictd restart 1>&2
+	/etc/rc.d/init.d/dictd restart 1>&2
 fi
 
 %postun -n dict-ptm
 if [ -f /var/lock/subsys/dictd ]; then
-    /etc/rc.d/init.d/dictd restart 1>&2
+	/etc/rc.d/init.d/dictd restart 1>&2
 fi
 
 %post -n dict-world95
