@@ -48,8 +48,8 @@ S³ownik The Devil's Dictionary, zawieraj±cy cyniczne i lekcewa¿±ce
 opisy s³ów - do u¿ywania z serwerem s³ownika dictd.
 
 %package -n dict-easton
-Summary:	easton dictionary for DICTD
-Summary(pl):	S³ownik easton dla dictd
+Summary:	Easton's dictionary for DICTD
+Summary(pl):	S³ownik Eastona dla dictd
 Group:		Applications/Dictionaries
 Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
@@ -65,8 +65,8 @@ Ten pakiet zawiera s³ownik Easton's 1897 Bible Dictionary do u¿ywania
 z serwerem s³ownika dictd.
 
 %package -n dict-elements
-Summary:	elements dictionary for DICTD
-Summary(pl):	S³ownik elements dla dictd
+Summary:	Elements dictionary for DICTD
+Summary(pl):	S³ownik pierwiastków dla dictd
 Group:		Applications/Dictionaries
 Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
@@ -83,7 +83,7 @@ dictd.
 
 %package -n dict-foldoc
 Summary:	The Free On-line Dictionary of Computing for DICTD
-Summary(pl):	Wolny s³ownik z dziedziny obliczeñ dla dictd
+Summary(pl):	Darmowy s³ownik z dziedziny obliczeñ dla dictd
 Group:		Applications/Dictionaries
 Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
@@ -97,8 +97,8 @@ Ten pakiet zawiera s³ownik The Free On-line Dictionary of Computing do
 u¿ywania z serwerem s³ownika dictd.
 
 %package -n dict-hitchcock
-Summary:	hitchcock dictionary for DICTD
-Summary(pl):	S³ownik hitchcock dla dictd
+Summary:	Hitchcock's dictionary for DICTD
+Summary(pl):	S³ownik Hitchcocka dla dictd
 Group:		Applications/Dictionaries
 Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
