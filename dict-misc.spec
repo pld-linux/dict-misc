@@ -9,6 +9,7 @@ Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
 Source1:	http://dsl.org/faq/fjd/journo-1.1.tar.gz
 Source2:	http://wiretap.area.com/Gopher/Library/Classic/devils.txt
+Source3:    http://ptm.linux.pl/slownik
 URL:		http://www.dict.org/
 BuildRequires:	autoconf
 BuildRequires:	dictzip
@@ -120,6 +121,21 @@ dictionary server in the dictd package.
 Ten pakiet zawiera s這wnik Free Journalism Dictionary do u篡wania z
 serwerem s這wnika dictd.
 
+%package -n dict-ptm
+Summary:    PTM dictionary for DICTD
+Summary(pl):    S這wnik PTM dla dictd
+Group:      Applications/Dictionaries
+Requires:   dictd
+Requires:   %{_sysconfdir}/dictd
+
+%description -n dict-ptm
+This package contains dictionary created by Projekt Tlumaczenia Manuali
+for use by the dicitonary server in the dictd package.
+
+%description -n dict-ptm -l pl
+Ten pakiet zawiera s這wnik Projektu T逝maczenia Manuali, do u篡cia z serwerem
+dictd.
+
 %package -n dict-world95
 Summary:	world95 dictionary for DICTD
 Summary(pl):	S這wnik world95 dla dictd
@@ -138,6 +154,7 @@ serwerem s這wnika dictd.
 %prep
 %setup -q -a1
 cp %{SOURCE2} ./
+cp %{SOURCE3} ./
 
 %build
 %{__autoconf}
@@ -155,16 +172,23 @@ sed 's/^[[:upper:]]\{2,\}/:&:/' ./devils.txt | ./dictfmt \
 
 dictzip devil.dict
 
+egrep -v "^#" slownik > slownik.1
+tr -d \[\] <slownik.1 > slownik.2
+sed  -e 's/^\([[:alnum:]]\{2,\}\)\ \ /:\1:/' < slownik.2 > slownik.3
+./dictfmt -j -u "http://ptm.linux.pl/slownik" -s PTM slownik  < slownik.3
+mv slownik.3 ptm
+dictzip ptm
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_datadir}/dictd/,%{_sysconfdir}/dictd,%{_bindir}}
 %{__make} install dictdir="$RPM_BUILD_ROOT%{_datadir}/dictd/"
-install journo.* devil.* $RPM_BUILD_ROOT%{_datadir}/dictd/
+install ptm.* journo.* devil.* $RPM_BUILD_ROOT%{_datadir}/dictd/
 
 # jargon has separate package
 rm -f $RPM_BUILD_ROOT%{_datadir}/dictd/jargon.*
 
-for i in easton elements foldoc hitchcock world95 journo devil; do
+for i in easton elements foldoc hitchcock world95 journo ptm devil; do
 dictprefix=%{_datadir}/dictd/$i
 echo "# Misc Dictionaries - $i
 database $i {
@@ -236,6 +260,16 @@ if [ -f /var/lock/subsys/dictd ]; then
 	/etc/rc.d/init.d/dictd restart 1>&2
 fi
 
+%post -n dict-ptm
+if [ -f /var/lock/subsys/dictd ]; then
+    /etc/rc.d/init.d/dictd restart 1>&2
+fi
+
+%postun -n dict-ptm
+if [ -f /var/lock/subsys/dictd ]; then
+    /etc/rc.d/init.d/dictd restart 1>&2
+fi
+
 %post -n dict-world95
 if [ -f /var/lock/subsys/dictd ]; then
 	/etc/rc.d/init.d/dictd restart 1>&2
@@ -275,6 +309,11 @@ fi
 %defattr(644,root,root,755)
 %attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/journo.dictconf
 %{_datadir}/dictd/journo.*
+
+%files -n dict-ptm
+%defattr(644,root,root,755)
+%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/ptm.dictconf
+%{_datadir}/dictd/ptm.*
 
 %files -n dict-world95
 %defattr(644,root,root,755)
