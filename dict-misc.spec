@@ -3,12 +3,12 @@ Summary:	misc dictionaries for DICTD
 Summary(pl):	R騜ne s這wniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
 Source1:	http://dsl.org/faq/fjd/journo-1.1.tar.gz
-Source2:    http://wiretap.area.com/Gopher/Library/Classic/devils.txt
+Source2:	http://wiretap.area.com/Gopher/Library/Classic/devils.txt
 URL:		http://www.dict.org/
 BuildRequires:	autoconf
 BuildRequires:	dictzip
@@ -16,7 +16,7 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%description 
+%description
 This package contains misc dictionaries for use by the dictionary
 server in the dictd package.
 
@@ -44,7 +44,7 @@ opisy s堯w - do u篡wania z serwerem s這wnika dictd.
 Summary:	easton dictionary for DICTD
 Summary(pl):	S這wnik easton dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd 
+Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-easton
@@ -59,7 +59,7 @@ dictd.
 Summary:	elements dictionary for DICTD
 Summary(pl):	S這wnik elements dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd 
+Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-elements
@@ -74,7 +74,7 @@ dictd.
 Summary:	foldoc dictionary for DICTD
 Summary(pl):	S這wnik foldoc dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd 
+Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-foldoc
@@ -89,7 +89,7 @@ dictd.
 Summary:	hitchcock dictionary for DICTD
 Summary(pl):	S這wnik hitchcock dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd 
+Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-hitchcock
@@ -119,7 +119,7 @@ dictd.
 Summary:	world95 dictionary for DICTD
 Summary(pl):	S這wnik world95 dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd 
+Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-world95
@@ -131,37 +131,37 @@ Ten pakiet zawiera s這wnik world95 do u篡wania z serwerem s這wnika
 dictd.
 
 %package -n dict-fmt
-Summary:    Dict file formater for DICTD
-Summary(pl):    Obrabiarka plik闚 dla dictda
-Group:      Applications/Dictionaries
-Requires:   %{_sysconfdir}/dictd
-Provides: dictfmt
+Summary:	Dict file formater for DICTD
+Summary(pl):	Obrabiarka plik闚 dla dictda
+Group:		Applications/Dictionaries
+Requires:	%{_sysconfdir}/dictd
+Provides:	dictfmt
 
 %description -n dict-fmt
-This package contains dictfmt, util for formater for files used aferwards
-by the dictionary server from the dictd package.
+This package contains dictfmt, util for formater for files used
+aferwards by the dictionary server from the dictd package.
 
 %description -n dict-devil -l pl
-Narz璠zia do obr鏏ki plik闚 u篡wanych p騧niej przez serwer z pakietu dictd.
+Narz璠zia do obr鏏ki plik闚 u篡wanych p騧niej przez serwer z pakietu
+dictd.
 
-%prep 
-%setup -q -a1 
+%prep
+%setup -q -a1
 cp %{SOURCE2} ./
 
 %build
 autoconf
-%configure 
-%{__make} db 
-
+%configure
+%{__make} db
 
 sed  -e 's/^[[:alpha:]]\{2,\}$/:&:/' < journo-1.1/journalism.dict \
-    > journalism.txt
+	> journalism.txt
 ./dictfmt -j -u "http://dsl.org/lit/" -s Journalism journo < journalism.txt
 dictzip journo.dict
 
 sed  's/^[[:upper:]]\{2,\}/:&:/' ./devils.txt | ./dictfmt  \
- -j -u http://wiretap.area.com/Gopher/Library/Classic/devils.txt \
-  -s "The Devil's Dictionary (1881-1906)" devil
+	-j -u http://wiretap.area.com/Gopher/Library/Classic/devils.txt \
+	-s "The Devil's Dictionary (1881-1906)" devil
 
 dictzip devil.dict
 
@@ -179,8 +179,8 @@ for i in easton elements foldoc hitchcock world95 journo devil; do
 dictprefix=%{_datadir}/dictd/$i
 echo "# Misc Dictionaries - $i
 database $i {
-    data  \"$dictprefix.dict.dz\"
-    index \"$dictprefix.index\" 
+	data  \"$dictprefix.dict.dz\"
+	index \"$dictprefix.index\"
 }" > $RPM_BUILD_ROOT%{_sysconfdir}/dictd/$i.dictconf
 done;
 
@@ -189,12 +189,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post -n dict-devil
 if [ -f /var/lock/subsys/dictd ]; then
-    /etc/rc.d/init.d/dictd restart 1>&2
+	/etc/rc.d/init.d/dictd restart 1>&2
 fi
 
 %postun -n dict-devil
 if [ -f /var/lock/subsys/dictd ]; then
-   /etc/rc.d/init.d/dictd restart 1>&2 || true
+	/etc/rc.d/init.d/dictd restart 1>&2 || true
 fi
 
 %post -n dict-easton
@@ -261,7 +261,7 @@ fi
 %defattr(644,root,root,755)
 %attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/devil.dictconf
 %{_datadir}/dictd/devil.*
-        
+
 %files -n dict-easton
 %defattr(644,root,root,755)
 %attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/easton.dictconf
@@ -291,7 +291,7 @@ fi
 %defattr(644,root,root,755)
 %attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/devil.dictconf
 %{_datadir}/dictd/devil.*
- 
+
 %files -n dict-fmt
 %defattr(644,root,root,755)
-%{_bindir}/dictfmt
+%attr(755,root,root) %{_bindir}/dictfmt
