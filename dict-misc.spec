@@ -167,8 +167,8 @@ cp %{SOURCE3} ./
 
 %build
 %{__autoconf}
-cp -f %{_datadir}/automake/install-sh .
-cp -f %{_datadir}/automake/config.sub .
+cp -f /usr/share/automake/install-sh .
+cp -f /usr/share/automake/config.sub .
 %configure
 %{__make} db
 
@@ -195,7 +195,9 @@ cd ..
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_datadir}/dictd/,%{_sysconfdir}/dictd,%{_bindir}}
-%{__make} install dictdir=$RPM_BUILD_ROOT%{_datadir}/dictd
+
+%{__make} install \
+	dictdir=$RPM_BUILD_ROOT%{_datadir}/dictd
 install ptm.* journo.* devil.* $RPM_BUILD_ROOT%{_datadir}/dictd
 install world02-2003-02-15/world02.* $RPM_BUILD_ROOT%{_datadir}/dictd
 
