@@ -8,13 +8,13 @@ License:	GPL
 Group:		Applications/Dictionaries
 Group(de):	Applikationen/Wörterbücher
 Group(pl):	Aplikacje/S³owniki
-URL:		http://www.dict.org/
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+URL:		http://www.dict.org/
 BuildRequires:	dictzip
 BuildRequires:	autoconf
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description 
 This package contains misc dictionaries for use by the dictionary
