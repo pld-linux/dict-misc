@@ -144,10 +144,10 @@ serwerem dictd.
 Summary:	CIAworldbook dictionary for DICTD
 Summary(pl):	S³ownik CIAworldbook dla dictd
 Group:		Applications/Dictionaries
+URL:		http://www.prime-project.org/dict/
 Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
-Obsoletes:  dict-world95
-# ulr: http://www.prime-project.org/dict/
+Obsoletes:	dict-world95
 
 %description -n dict-CIAworldbook
 This package contains The 2002 CIA World Factbook for use by the
