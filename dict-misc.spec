@@ -21,8 +21,9 @@ server in the dictd package.
 
 %package -n dict-hitchcock
 Summary:	hitchcock dictionary for DICTD
-Group:		Applications/Dictionary
-######		Unknown group!
+Group:		Applications/Dictionaries
+Group(de):	Applikationen/Wörterbücher
+Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 BuildArch:	noarch
@@ -33,8 +34,9 @@ server in the dictd package
 
 %package -n dict-world95
 Summary:	world95 dictionary for DICTD
-Group:		Applications/Dictionary
-######		Unknown group!
+Group:		Applications/Dictionaries
+Group(de):	Applikationen/Wörterbücher
+Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 BuildArch:	noarch
@@ -45,8 +47,9 @@ server in the dictd package
 
 %package -n dict-foldoc
 Summary:	foldoc dictionary for DICTD
-Group:		Applications/Dictionary
-######		Unknown group!
+Group:		Applications/Dictionaries
+Group(de):	Applikationen/Wörterbücher
+Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 BuildArch:	noarch
@@ -57,8 +60,9 @@ server in the dictd package
 
 %package -n dict-easton
 Summary:	easton dictionary for DICTD
-Group:		Applications/Dictionary
-######		Unknown group!
+Group:		Applications/Dictionaries
+Group(de):	Applikationen/Wörterbücher
+Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 BuildArch:	noarch
@@ -69,8 +73,9 @@ server in the dictd package
 
 %package -n dict-elements
 Summary:	elements dictionary for DICTD
-Group:		Applications/Dictionary
-######		Unknown group!
+Group:		Applications/Dictionaries
+Group(de):	Applikationen/Wörterbücher
+Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 BuildArch:	noarch
