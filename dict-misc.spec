@@ -11,9 +11,9 @@ URL:		http://www.dict.org/
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	dictzip
+BuildRequires:	autoconf
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
-BuildArch:	noarch
 
 %description 
 This package contains misc dictionaries for use by the dictionary
@@ -26,7 +26,6 @@ Group(de):	Applikationen/Wörterbücher
 Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
-BuildArch:	noarch
 
 %description -n dict-hitchcock
 This package contains hitchcock dictionaries for use by the dicitonary
@@ -39,7 +38,6 @@ Group(de):	Applikationen/Wörterbücher
 Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
-BuildArch:	noarch
 
 %description -n dict-world95
 This package contains world95 dictionaries for use by the dicitonary
@@ -52,7 +50,6 @@ Group(de):	Applikationen/Wörterbücher
 Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
-BuildArch:	noarch
 
 %description -n dict-foldoc
 This package contains foldoc dictionaries for use by the dicitonary
@@ -65,7 +62,6 @@ Group(de):	Applikationen/Wörterbücher
 Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
-BuildArch:	noarch
 
 %description -n dict-easton
 This package contains easton dictionaries for use by the dicitonary
@@ -78,7 +74,6 @@ Group(de):	Applikationen/Wörterbücher
 Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
-BuildArch:	noarch
 
 %description -n dict-elements
 This package contains elements dictionaries for use by the dicitonary
@@ -88,6 +83,7 @@ server in the dictd package
 %setup -q
 
 %build
+autoconf
 %configure 
 %{__make} db 
 
