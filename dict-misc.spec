@@ -9,7 +9,7 @@ Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
 Source1:	http://dsl.org/faq/fjd/journo-1.1.tar.gz
 Source2:	http://wiretap.area.com/Gopher/Library/Classic/devils.txt
-Source3:    http://ptm.linux.pl/slownik
+Source3:	http://ptm.linux.pl/slownik
 URL:		http://www.dict.org/
 BuildRequires:	autoconf
 BuildRequires:	dictzip
@@ -100,7 +100,8 @@ Requires:	%{_sysconfdir}/dictd
 %description -n dict-hitchcock
 This package contains Hitchcock's Bible Names Dictionary, derived from
 Hitchcock's New and Complete Analysis of the Holy Bible, published in
-the late 1800's, for use by the dictionary server in the dictd package.
+the late 1800's, for use by the dictionary server in the dictd
+package.
 
 %description -n dict-hitchcock -l pl
 Ten pakiet zawiera s這wnik Hitchcock's Bible Names Dictionary do
@@ -122,19 +123,19 @@ Ten pakiet zawiera s這wnik Free Journalism Dictionary do u篡wania z
 serwerem s這wnika dictd.
 
 %package -n dict-ptm
-Summary:    PTM dictionary for DICTD
-Summary(pl):    S這wnik PTM dla dictd
-Group:      Applications/Dictionaries
-Requires:   dictd
-Requires:   %{_sysconfdir}/dictd
+Summary:	PTM dictionary for DICTD
+Summary(pl):	S這wnik PTM dla dictd
+Group:		Applications/Dictionaries
+Requires:	dictd
+Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-ptm
-This package contains dictionary created by Projekt Tlumaczenia Manuali
-for use by the dicitonary server in the dictd package.
+This package contains dictionary created by Projekt Tlumaczenia
+Manuali for use by the dicitonary server in the dictd package.
 
 %description -n dict-ptm -l pl
-Ten pakiet zawiera s這wnik Projektu T逝maczenia Manuali, do u篡cia z serwerem
-dictd.
+Ten pakiet zawiera s這wnik Projektu T逝maczenia Manuali, do u篡cia z
+serwerem dictd.
 
 %package -n dict-world95
 Summary:	world95 dictionary for DICTD
