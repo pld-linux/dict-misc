@@ -3,7 +3,7 @@ Summary:	Miscellaneous dictionaries for DICTD
 Summary(pl):	Ró¿ne s³owniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	13
+Release:	14
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -172,7 +172,7 @@ cp -f %{_datadir}/automake/config.sub .
 %configure
 %{__make} db
 
-sed 's/^[[:alpha:]]\{2,\}$/:&:/' journo-1.1/journalism.dict | \
+sed 's/^[[:alpha:]]\{2,\}$/:&:/' fjd/journalism.dict | \
 	dictfmt -j -u "http://dsl.org/lit/" -s Journalism journo
 dictzip journo.dict
 
