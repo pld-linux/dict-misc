@@ -3,7 +3,7 @@ Summary:	Miscellaneous dictionaries for DICTD
 Summary(pl):	Ró¿ne s³owniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	9
+Release:	10
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -12,6 +12,7 @@ Source2:	http://wiretap.area.com/Gopher/Library/Classic/devils.txt
 Source3:	http://ptm.linux.pl/slownik
 URL:		http://www.dict.org/
 BuildRequires:	autoconf
+BuildRequires:	dictfmt
 BuildRequires:	dictzip
 Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
@@ -162,29 +163,27 @@ cp %{SOURCE3} ./
 %configure
 %{__make} db
 
-sed -e 's/^[[:alpha:]]\{2,\}$/:&:/' < journo-1.1/journalism.dict \
-	> journalism.txt
-./dictfmt -j -u "http://dsl.org/lit/" -s Journalism journo < journalism.txt
+sed 's/^[[:alpha:]]\{2,\}$/:&:/' journo-1.1/journalism.dict | \
+	dictfmt -j -u "http://dsl.org/lit/" -s Journalism journo
 dictzip journo.dict
 
-sed 's/^[[:upper:]]\{2,\}/:&:/' ./devils.txt | ./dictfmt \
-	-j -u http://wiretap.area.com/Gopher/Library/Classic/devils.txt \
+sed 's/^[[:upper:]]\{2,\}/:&:/' devils.txt | \
+	dictfmt -j -u http://wiretap.area.com/Gopher/Library/Classic/devils.txt \
 	-s "The Devil's Dictionary (1881-1906)" devil
-
 dictzip devil.dict
 
-egrep -v "^#" slownik > slownik.1
-tr -d \[\] <slownik.1 > slownik.2
-tr êó±¶³¿¼æñ eoaslzzcn <slownik.2 > slownik.3
-sed -e 's/^\([[:alnum:]]\{2,\}\)\ \ /:\1:/' < slownik.3 > slownik.4
-./dictfmt -j -u "http://ptm.linux.pl/slownik" -s "Projekt Tlumaczenia Manuali" ptm < slownik.4
+#egrep -v "^#" slownik | tr -d \[\] | tr êó±¶³¿¼æñ eoaslzzcn | \
+egrep -v "^#" slownik | tr -d \[\] | \
+	sed 's/^\([[:alnum:]]\{2,\}\)\ \ /:\1:/' | \
+	dictfmt -j -u "http://ptm.linux.pl/slownik" \
+	-s "Projekt Tlumaczenia Manuali" ptm
 dictzip ptm.dict
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_datadir}/dictd/,%{_sysconfdir}/dictd,%{_bindir}}
-%{__make} install dictdir="$RPM_BUILD_ROOT%{_datadir}/dictd/"
-install ptm.* journo.* devil.* $RPM_BUILD_ROOT%{_datadir}/dictd/
+%{__make} install dictdir=$RPM_BUILD_ROOT%{_datadir}/dictd
+install ptm.* journo.* devil.* $RPM_BUILD_ROOT%{_datadir}/dictd
 
 # jargon has separate package
 rm -f $RPM_BUILD_ROOT%{_datadir}/dictd/jargon.*
