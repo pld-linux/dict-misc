@@ -4,7 +4,9 @@ Name:		dict-%{dictname}
 Version:	1.5
 Release:	1
 License:	GPL
-Group:		Applications/Dictionary
+Group:		Applications/Dictionaries
+Group(de):	Applikationen/Wörterbücher
+Group(pl):	Aplikacje/S³owniki
 URL:		http://www.dict.org/
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -14,63 +16,68 @@ Requires:	%{_sysconfdir}/dictd
 BuildArch:	noarch
 
 %description 
-This package contains misc dictionaries for use by the dictionary server in the
-dictd package.
+This package contains misc dictionaries for use by the dictionary
+server in the dictd package.
 
 %package -n dict-hitchcock
 Summary:	hitchcock dictionary for DICTD
 Group:		Applications/Dictionary
+######		Unknown group!
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 BuildArch:	noarch
 
 %description -n dict-hitchcock
-This package contains hitchcock dictionaries for use by the dicitonary server
-in the dictd package
+This package contains hitchcock dictionaries for use by the dicitonary
+server in the dictd package
 
 %package -n dict-world95
 Summary:	world95 dictionary for DICTD
 Group:		Applications/Dictionary
+######		Unknown group!
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 BuildArch:	noarch
 
 %description -n dict-world95
-This package contains world95 dictionaries for use by the dicitonary server
-in the dictd package
+This package contains world95 dictionaries for use by the dicitonary
+server in the dictd package
 
 %package -n dict-foldoc
 Summary:	foldoc dictionary for DICTD
 Group:		Applications/Dictionary
+######		Unknown group!
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 BuildArch:	noarch
 
 %description -n dict-foldoc
-This package contains foldoc dictionaries for use by the dicitonary server
-in the dictd package
+This package contains foldoc dictionaries for use by the dicitonary
+server in the dictd package
 
 %package -n dict-easton
 Summary:	easton dictionary for DICTD
 Group:		Applications/Dictionary
+######		Unknown group!
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 BuildArch:	noarch
 
 %description -n dict-easton
-This package contains easton dictionaries for use by the dicitonary server
-in the dictd package
+This package contains easton dictionaries for use by the dicitonary
+server in the dictd package
 
 %package -n dict-elements
 Summary:	elements dictionary for DICTD
 Group:		Applications/Dictionary
+######		Unknown group!
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 BuildArch:	noarch
 
 %description -n dict-elements
-This package contains elements dictionaries for use by the dicitonary server
-in the dictd package
+This package contains elements dictionaries for use by the dicitonary
+server in the dictd package
 
 %prep 
 %setup -q
@@ -82,7 +89,7 @@ in the dictd package
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_datadir}/dictd/,%{_sysconfdir}/dictd}
-make install dictdir="$RPM_BUILD_ROOT%{_datadir}/dictd/"
+%{__make} install dictdir="$RPM_BUILD_ROOT%{_datadir}/dictd/"
 
 # jargon has separate package
 rm -f $RPM_BUILD_ROOT%{_datadir}/dictd/jargon.*
@@ -154,6 +161,7 @@ if [ -f /var/lock/subsys/dictd ]; then
 fi
 
 %files
+%defattr(644,root,root,755)
 
 %files -n dict-hitchcock
 %defattr(644,root,root,755)
