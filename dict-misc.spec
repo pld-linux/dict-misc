@@ -1,5 +1,6 @@
 %define         dictname misc
 Summary:	misc dictionaries for DICTD
+Summary(pl):	Ró¿ne s³owniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
 Release:	1
@@ -19,8 +20,13 @@ Requires:	%{_sysconfdir}/dictd
 This package contains misc dictionaries for use by the dictionary
 server in the dictd package.
 
+%description -l pl
+Ten pakiet zawiera ró¿ne s³owniki do u¿ywania z serwerem s³ownika
+dictd.
+
 %package -n dict-hitchcock
 Summary:	hitchcock dictionary for DICTD
+Summary(pl):	S³ownik hitchcock dla dictd
 Group:		Applications/Dictionaries
 Group(de):	Applikationen/Wörterbücher
 Group(pl):	Aplikacje/S³owniki
@@ -29,10 +35,15 @@ Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-hitchcock
 This package contains hitchcock dictionaries for use by the dicitonary
-server in the dictd package
+server in the dictd package.
+
+%description -n dict-hitchcock -l pl
+Ten pakiet zawiera s³ownik hitchcock do u¿ywania z serwerem s³ownika
+dictd.
 
 %package -n dict-world95
 Summary:	world95 dictionary for DICTD
+Summary(pl):	S³ownik world95 dla dictd
 Group:		Applications/Dictionaries
 Group(de):	Applikationen/Wörterbücher
 Group(pl):	Aplikacje/S³owniki
@@ -41,10 +52,15 @@ Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-world95
 This package contains world95 dictionaries for use by the dicitonary
-server in the dictd package
+server in the dictd package.
+
+%description -n dict-world95 -l pl
+Ten pakiet zawiera s³ownik world95 do u¿ywania z serwerem s³ownika
+dictd.
 
 %package -n dict-foldoc
 Summary:	foldoc dictionary for DICTD
+Summary(pl):	S³ownik foldoc dla dictd
 Group:		Applications/Dictionaries
 Group(de):	Applikationen/Wörterbücher
 Group(pl):	Aplikacje/S³owniki
@@ -53,10 +69,15 @@ Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-foldoc
 This package contains foldoc dictionaries for use by the dicitonary
-server in the dictd package
+server in the dictd package.
+
+%description -n dict-foldoc -l pl
+Ten pakiet zawiera s³ownik foldoc do u¿ywania z serwerem s³ownika
+dictd.
 
 %package -n dict-easton
 Summary:	easton dictionary for DICTD
+Summary(pl):	S³ownik easton dla dictd
 Group:		Applications/Dictionaries
 Group(de):	Applikationen/Wörterbücher
 Group(pl):	Aplikacje/S³owniki
@@ -65,10 +86,15 @@ Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-easton
 This package contains easton dictionaries for use by the dicitonary
-server in the dictd package
+server in the dictd package.
+
+%description -n dict-easton -l pl
+Ten pakiet zawiera s³ownik easton do u¿ywania z serwerem s³ownika
+dictd.
 
 %package -n dict-elements
 Summary:	elements dictionary for DICTD
+Summary(pl):	S³ownik elements dla dictd
 Group:		Applications/Dictionaries
 Group(de):	Applikationen/Wörterbücher
 Group(pl):	Aplikacje/S³owniki
@@ -77,7 +103,11 @@ Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-elements
 This package contains elements dictionaries for use by the dicitonary
-server in the dictd package
+server in the dictd package.
+
+%description -n dict-elements -l pl
+Ten pakiet zawiera s³ownik elements do u¿ywania z serwerem s³ownika
+dictd.
 
 %prep 
 %setup -q
@@ -160,9 +190,6 @@ fi
 if [ -f /var/lock/subsys/dictd ]; then
 	/etc/rc.d/init.d/dictd restart 1>&2
 fi
-
-%files
-%defattr(644,root,root,755)
 
 %files -n dict-hitchcock
 %defattr(644,root,root,755)
