@@ -7,6 +7,7 @@ Release:	11
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
+# Source0-md5:	74a41d916b76323482b273f8b53c31bf
 Source1:	http://dsl.org/faq/fjd/journo-1.1.tar.gz
 # Source1-md5:	e7ee9a7694e5640cca02da993839771a
 Source2:	http://wiretap.area.com/Gopher/Library/Classic/devils.txt
