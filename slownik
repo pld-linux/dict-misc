@@ -1,0 +1,516 @@
+# S³ownik (leksykon?) dla PTM
+# Lipiec 1999 (GPL) PTM
+# Wskazówka dla t³umaczy: tu wstawi± wszelkie dziwne s³ówka... ;)
+# Oczywi¶cie po uzgodnieniu na ptm@amg.net.pl, lub znalezieniu w fachowej
+# ksi±?ce, lub podreczniku.
+# Format wpisów:
+# Klucz[jedna lub wiecej tabulacji]Opis1[%komentarz1] (jedna linijka)
+# [[jedna lub wiecej tabulacji]Opis2[%komentarz2]
+# ...
+# [[jedna lub wiecej tabulacji]OpisN[%komentarzN]
+# - Odno¶niki miedzy znaki `!' (patrz `to debug')
+# - Komentarz za znakiem `%'
+# - Czasowniki poprzedzamy `to'
+
+acknowledgments         podziekowania                   % czesto wypada z g³owy
+additionaly             dodatkowo                       % podstawowe znaczenie
+                        poza tym                        % czesto brzmi du?o lepiej ni? `dodatkowo'
+adjustment              nastawienie
+alignment               wyrównanie
+assertion               zapewnienie
+authentication          uwierzytelnianie
+                        autentykacja                    % troche slangowo
+authorization           autoryzacja
+backdoor                tylne wyj¶cie
+background              t³o
+backing store           buforowanie ekranu              % przez serwer w X Window System
+backslash               znak lewego uko¶nika
+bandwidth               szeroko¶æ pasma
+bit                     bit
+block device            urz±dzenie blokowe              % np. dysk twardy
+bold                    pogrubienie
+                        wyt³uszczenie
+bookmark                zak³adka                        % szczególnie kontekst edytorów, itp.
+boot loader             startowy program ³aduj±cy       % (c) PTM
+boot sector             sektor startowy
+border                  ramka
+brace                   nawias klamrowy
+bracket                 nawias kwadratowy
+breakpoint              punkt wstrzymania
+                        pu³apka
+bridge                  most
+broadcast address       adres rozg³oszeniowy    % id±c za "TCP/IP Administracja sieci" C. Hunta
+busy waiting            oczekiwanie aktywne     % procesu na zdarzenie
+byte                    bajt
+bytecode                kod bajtowy
+                        kod binarny
+cache                   bufor podreczny
+callback                oddzwanianie
+capability              zdolno¶æ
+                        mo?liwo¶æ               % w niektórych wypadkach--wtedy jest to dobre stylistycznie
+carrige return          powrót karetki
+carry                   przeniesienie           % np. gdy 99+01=00
+character device        urz±dzenie znakowe      % np. port RS232
+charset                 zestaw znaków
+child process           proces potomny
+cipher                  szyfr
+circuit switched network        sieæ z komutacj± kana³ów        % tj. przy po³±czeniu, np. telefonicznym dostajemy w³asny kana³ w centrali przeciwienstwo to sieæ z komutacj± pakietów
+click                   klikniecie
+                        mla¶niecie              % wg Jana Bieleckiego
+cluster                 klaster                 % grupa obiektów, maj±cych wspóln± ceche
+                        zlepek
+colon                   dwukropek
+column                  kolumna
+command                 polecenie
+common                  wspólny
+                        powszechny
+compatible              zgodny
+                        kompatybilny            % w ostateczno¶ci :)
+complex number          liczba zespolona
+compound                z³o?ony
+connection              po³±czenie
+conse                   wagonik                 % (c) PTM: Lispowy dwurekord z³o¿ony z `car' i `cdr'. `Wagonik' jest prób± okre¶lenia funkcjonalno¶ci tej struktury.
+constraint              ograniczenie
+convenience             wygoda
+control sequences       sekwencje steruj±ce
+control characters      znaki steruj±ce
+control terminal        terminal steruj±cy
+cooperative multitasking        wielozadaniowo¶æ kooperatywna
+courtesy copy           kopia grzeczno¶ciowa    % czyli CC w nag³ówkach listów
+custom                  obyczaj                 % podstawowe znaczenie
+                        w³asny                  % np. dostosowany do swoich potrzeb lub zwyczajów
+daemon                  demon
+datagram                datagram
+DBMS                    DBMS                    % system zarz±dzania baz± danych (Database Management System)
+deadlock                blokada                 % np. gdy dwa procesy nawzajem na siebie czekaj± (np. jeden na plik u?ywany przez drugi, a drugi na plik u?ywany przez pierwszy)
+debugger                debugger                % narzedzie wy³apywania b³edów programu
+                        odpluskwiacz            % slangowo, ale mi³e dla ucha :-)
+default                 domy¶lny
+deferred                od³o¿ony
+delimiter               ogranicznik
+                        separator
+demultiplexing          rozdzielanie            % za t³umaczeniem Stevensa, np. gdy UDP rozdziela pakiety z interfejsu na poszczególnych u¿ytkowników
+deprecated              przestarza³y
+design                  projekt
+                        wykonczenie             % (PTM) np. `motif-like design'
+                        wzór
+desired                 oczekiwany
+desktop                 pulpit
+dumb terminal           terminal uproszczony    % propozycja Kloczka
+diff file               plik ró?nicowy          % wynik u?ycia komendy diff(1)
+differential            ró?niczka               % matematycznie
+                        zró?nicowany
+digraph                 dwuznak
+discrepency             sprzeczno¶æ
+dot                     kropka
+DPMS                    DPMS                    % (Display Power Management Signalling)
+driver                  sterownik
+edition                 edycja
+efficiency              wydajno¶æ
+elaboration             opracowanie
+embedded                osadzony
+encryption              szyfrowanie
+end to end              obs³uga bezpo¶rednia
+engine                  mechanizm               % spotkane w s³owniku Adama Podstawczynskiego, ca³kiem zreczne
+                        motor                   % spotykane w praktyce
+                        silnik                  % spotykane w praktyce
+enumeration             wyliczenie
+envelope                kopertowy               % np. Sender w poczcie jest adresem kopertowym
+environment             ¶rodowisko
+escape seqences         sekwencje specjalne
+escape characters       znaki specjalne
+escaped                 cytowany                % zazwyczaj, np. `\ ' to cytowana spacja
+even parity             dope³nianie bajtu do parzystej liczby jedynek
+exception               wyj±tek
+exchanger               wymiennik               % np. wymiennik poczty (MX)
+exclusive               wy³±czny
+explicit                jawny
+expression              wyra?enie
+extension               rozszerzenie
+filehandle              uchwyt (deskryptor) pliku
+filesystem              system plików
+firewall                zapora ogniowa          % ¶rednio popularne okre¶lenie...
+                        firewall                % raczej slangowo
+flexible                elastyczny
+floating point          zmiennoprzecinkowy
+font                    czcionka
+                        font                    % s± sprzeczne g³osy co do tego czy jest to forma poprawna :)
+foreground              pierwszy plan
+forwarded message       wiadomo¶æ przelotowa    % warto, co by sie przyje³o :)
+forwarding              przekazywanie
+                        forwardowanie           % slang
+frame                   ramka
+frontend                interfejs
+full duplex             transmisja dwukierunkowa
+gateway                 bramka
+                        brama
+generic                 zwyk³y
+                        podstawowy
+glitch                  krótkie zak³ócenie
+glyph                   glif                    % np. matryca znaku
+half duplex             transmisja naprzemienna
+handler                 procedura obs³ugi
+handshake               programowe/sprzetowe potwierdzenie
+                        pakiet powitalny negocjacji protoko³u   % w du¿ej cze¶ci wypadków
+hardcopy terminal       terminal hardcopy       % terminal z mo¿liwo¶ci± drukowania
+hexadecimal             szesnastkowy
+highlight               pod¶wietlenie
+hop by hop              obs³uga tranzytowa
+horizontal              poziomy
+host                    stacja sieciowa
+                        host                    % slangowo, lecz akceptowalnie
+hyphenation             dzielenie wyrazów
+IDE                     IDE                     % Integrated Development Environment
+idleness                bezczynno¶æ
+image                   obraz                   % nie tylko w sensie dos³ownym, lecz równie? np. kernel image, module image, itp.
+implementation          implementacja
+implicit                niejawny
+inch                    cal
+individual              konkretny
+                        poszczególny
+interface               interfejs
+                        miedzymordzie           % fama g³osi, ?e dawno temu by³o to powa?ne okrePlenie :)
+inode                   iweze³
+inheritance             dziedziczenie
+integral                ca³ka                   % matematycznie
+                        integralny
+interlaced              z przeplotem
+interrupt               przerwanie
+interrupt character     znak przerwania
+intersection            przekrój                % zbioru matematycznego
+                        cze¶æ wspólna
+invalid                 nieprawid³owy
+italic                  kursywa
+item                    element
+                        pozycja
+job                     zadanie                 % czesto w terminologii komputerowej
+                        praca                   % spotykane w t³umaczeniach ksi±?kowych
+jumper                  zworka
+kernel                  j±dro
+keyword                 s³owo kluczowe
+largery                 w du¿ym stopniu
+                        w wiekszo¶ci
+latency                 zw³oka
+layer                   warstwa
+layout                  rozmieszczenie
+level                   poziom
+line                    linia
+                        wiersz                  % czesto ³adniej brzmi
+line discipline         dyscyplina linii        % okre¶lenie z newsów, pcp
+                        protokó³ obs³ugi        % np. protokó³ obs³ugi terminala - terminal line discipline
+                        protokó³ obs³ugi linii
+link                    dowi±zanie              % w systemie plików
+                        odno¶nik                % np. w HTML
+listed                  wyszczególniony
+                        wy¶wietlony
+                        wylistowany             % slangowo
+literal                 litera³                 % okre¶lenie Jana Bieleckiego
+                        literalnie              % okre¶lenie Jana Bieleckiego
+leading                 wiod±cy
+                        prowadz±cy
+                        poprzedzaj±cy
+loader                  ³adowarka               % np. module loader, itp. [(c) PTM]
+loadable module         modu³ dynamiczny        % (c) PTM
+local area network      sieæ lokalna            % czyli LAN
+lock file               plik blokuj±cy
+logging                 raportowanie
+                        rejestrowanie
+                        logowanie               % raczej slangowo
+login shell             pow³oka zg³oszeniowa    % ze Stevensa
+lvalue                  lwarto¶æ                % okre¶lenie Jana Bieleckiego
+mail                    list
+                        wiadomo¶æ
+                        poczta
+mailbox                 skrzynka pocztowa
+mailing list            lista dyskusyjna
+major device number     du?y (majorowy) numer urz±dzenia
+manual                  podrecznik
+man page                strona podrecznika systemowego
+                        strona podrecznika man
+master                  nadrzedny               % np. dysk
+match                   dopasowanie
+meta                    meta
+minor device number     ma³y (minorowy) numer urz±dzenia
+mode                    tryb
+                        stan
+                        prawa                   % czasem
+multicast address       adres grupowy
+multiplexing            zwielokrotnianie        % za t³umaczeniem Stevensa, np. gdy przez jedn± karte sieciow± lec± ró?ne protoko³y sieciowe
+multitasking            wielozadaniowy
+mutual                  wzajemny
+name server             serwer nazw
+                        DNS                     % Domain Name Server
+name space              przestrzen nazw
+                        przestrzen adresowa
+named pipe              potok nazwany
+                        ³±cze nazwane
+nested                  zagnie?d?ony
+newline                 nowa linia
+newsgroup               grupa dyskusyjna
+notation                notacja
+novice                  pocz±tkuj±cy
+occurence               wyst±pienie             % w sensie (kolejnego) pojawienia
+octal                   ósemkowy
+odd parity              dope³nianie bajtu do nieparzystej liczby jedynek
+ordered                 uporz±dkowany
+                        zamówiony
+OSI                     OSI                     % Open Systems Interconnection--model teoretyczny sieci
+packet switched network         sieæ z komutacj± pakietów       % na jednej linii biegn± fragmentowane pakiety ró?nych klientów
+parent process          proces macierzysty
+parity                  parzysto¶æ
+parity bit              bit parzysto¶ci
+passphrase              fraza koduj±ca          % u?ywane do blokowania ju? istniej±cego klucza/has³a
+                        has³o                   % rzadziej
+patch                   ³ata
+path                    ¶cie¿ka                 % np. ¶cie?ka dostepu
+pattern                 wzorzec
+permissions             uprawnienia
+pid                     identyfikator procesu
+                        pid
+pipe                    ³±cze komunikacyjne
+                        potok
+pipeline                potok
+pixel                   piksel
+policy                  polityka
+polling                 odpytywanie
+preemptive multitasking wielozadaniowo¶æ z wyw³aszczaniem
+prefix                  przedrostek
+process                 proces
+prompt                  znak zachety
+provider                dostawca
+PSTN                    PSTN                            % Public Switched Telephone Network
+public key ring         pek kluczy publicznych          % w PGP
+query                   zapytanie
+queue                   kolejka
+quit character          znak zakonczenia
+race condition          sytuacja wy¶cigów
+RAD                     RAD                             % Rapid Application Development
+rational                liczba wymierna
+raw                     surowy
+read ahead              czytanie z wyprzedzeniem        % czyli buforowanie odczytu
+receiver                odbiorca
+recursive               rekurencyjny
+recursion               rekurencja
+redirection             przekierowanie
+                        przeadresowanie
+reentrant               wielobie?ny
+reference               referencja                      % ogólne pojecie
+                        odniesienie                     % czasem brzmi to bardziej polsko
+register                rejestr
+relay                   retransmiter                    % np. retransmiter poczty :-)
+release                 wydanie                         % np. w System V release 4
+relocation              relokacja                       % w konsolidatorze polega na przyznawanie adresów czasu dzia³ania poszczególnym sekcjom kodu
+remaining               pozosta³y
+remote                  zdalny
+repeater                przeka 1/4nik
+replacement             zastepowanie
+request                 ?±danie
+resolution              rozdzielczo¶æ
+restricted              ograniczony
+                        zastrze?ony
+restricted shell        pow³oka okrojona
+rotating                obrotowy                        % np. rotating dash w mc
+                        migruj±cy                       % np. migruj±ce pliki z logami
+route                   trasa
+                        marszruta
+router                  router                          % niestety, przyje³o sie ju? w jezyku...
+row                     wiersz
+sample                  przyk³ad
+                        próbka
+scathed                 uszkodzony
+scheduler               planista                        % za t³umaczeniem Listera, Eageta "Wprowadzenie do systemów operacyjnych"
+scheduling policy       polityka harmonogramowa         % przydzielania zadanim czasu prcoesora
+                        polityka zadaniowa
+scope                   zakres
+                        zawe?enie
+screen saver            wygaszacz ekranu
+SCSI                    SCSI                            % Small Computer System Interface
+semaphore               semafor
+semicolon               ¶rednik
+server                  serwer
+service                 us³uga
+shared memory           pamieæ dzielona
+shell                   pow³oka
+site                    witryna                         % w wypadku WWW
+                        host                            % czasem jest to równowa?ne
+                        okolica sieciowa                % eksperymentalna propozycja t³umaczenia oryginalnej nazwy `site'
+slave                   podleg³y                        % np. dysk
+slash                   uko¶nik
+socket                  gniazdo
+stack                   stos
+standout                wyró?niony
+start character         znak rozpoczecia                % znak kontrolny, wznawiaj±cy transmisje
+statement               instrukcja
+stop character          znak stopu                      % znak kontrolny, zatrzymuj±cy transmisje
+stream                  strumien
+string                  ³ancuch (znaków)
+                        napis
+                        string                          % niezalecane, slang
+subscript               indeks dolny
+subsequent              dalszy
+                        pó 1/4niejszy
+                        kolejny
+suffix                  przyrostek
+summary                 zestawienie
+                        podsumowanie
+                        wnioski                         % w sensie podsumuj±cym
+superscript             indeks górny
+superuser               superu?ytkownik
+                        administrator                   % wersja zalecana przez Kloczka ;)
+swap file               plik wymiany
+swap partition          partycja wymiany
+switch                  prze³±cznik                     % urz±dzenie zarz±dzaj±ce prze³±czaniem sieci
+system call             wywo³anie systemowe
+tab                     tabulacja
+tab-stop                tabulator
+tag                     znacznik
+template                szablon                         % np. w C++
+theme                   motyw
+threshold               próg
+throttled               st³umiony
+tick                    znak kontrolny
+                        ptaszek
+                        tykniecie
+timeout                 czas oczekiwania
+                        czas opó 1/4nienia
+time stamp              piecz±tka czasowa               % (c) PTM
+to accept               przyjmowaæ
+to amend                poprawiae
+to append               doklej±
+to attach               przy³±czyae
+to attempt              próbow±
+to bind                 zwi±z±                         % np. warto¶æ z symbolem zmiennej
+to concatenate          ³±czyae
+                        konkatenow±                    % z pogranicza slangu, ale troche ¶ci¶lejsze
+to customize            dostosow±
+to debug                pracow± z !debugger!em
+                        odpluskwi±                     % slang
+                        odrobacz±                      % slang
+to decrypt              rozszyfrow±
+to descend              schodziae
+to design               przeznacz±
+                        zaprojektow±
+to detach               od³±czyae                        % w terminologii uniksowej, od³±czyae od terminala i przej¶æ w t³o
+to download             pobier±
+to edit                 edytow±                        % w kontek¶cie tekstu
+                        modyfikow±                     % w kontek¶cie innych rzeczy
+to encrypt              szyfrow±
+to establish            zestawiae
+                        ustanowiae
+to evaluate             oceni±
+                        analizow±                      % w praktyce to s³owo jest trafniejsze w t³umaczeniach, np. "to evaluate an expression"
+to execute              wykon±
+                        wywo³±
+to flush                opró?niae
+to follow               nastepow±                      % np. "a follows b"--"a nastepuje po b"
+to force                wymusiae
+                        zmusiae
+to fork                 rozwidliae                       % w odniesieniu do funkcji fork(2)--rozwidliae proces; rozwidliae sie w proces potomny, itp.
+to idle                 pró?now±
+to impede               hamow±
+                        utrudni±
+to interface            ³±czyae
+                        sprzeg±
+                        po¶redniczyae
+to involve              anga?ow±
+to imply                wymusz±
+to join                 przy³±cz±
+                        do³±cz±
+                        ³±czyae                          % ale co¶ do czego¶ co ju? istnieje - patrz te? 'to merge'
+to kill                 zabiae                           % nie 'usun±ae', gdy? istniej± inne sygna³y ni? SIGSTOP/SIGKILL
+                        ubiae                            % bardziej slangowo, lecz wci±? dobrze
+to link                 konsolidow±
+                        linkow±                        % slangowo
+                        ³±czyae                          % spaj± fragmenty czego¶ w ca³o¶æ
+to list                 wyszczególni±
+                        umieszczeae na li¶cie
+                        wypisyw±
+                        listow±                        % slangowo
+to lock                 zajmow±
+                        blokow±
+to maintain             pielegnow±
+                        obs³ugiw±                      % np. to maintain a network--obs³ugiw± sieae (jako administrator)
+to match                dopasow±
+                        odpowiad±                      % odpowiad± czemu¶
+to merge                spaj±
+                        ³±czyae                          % ale dwie osobne cze¶ci w jedn± - patrz te? 'to join'
+to mingle               miesz±
+to mount                montow±
+to overload             przeci±?yae
+to override             przes³oniae
+                        przeci±?yae                      % mieae pierwszenstwo
+to overstrike           nadstukiw±
+to overwrite            nadpis±
+to parse                analizow± sk³adnie
+to permit               zezwoliae
+to preempt              wyw³aszcz±
+to process              przetwarz±
+to receive              odbier±
+to refresh              od¶wie¿±
+to release              zwolniae
+                        wypu¶ciæ
+to replace              zast±piae
+to restore              odtworzyae
+to resume               wznowiae
+to retain               zachowyw±
+to schedule             przydziel± zasoby              % j±dro obs³uguj±c liste zadan decyduje, który proces mo?e aktualnie korzyst± ze sprzetu
+                        prze³±cz± zadania              % mo?e mniej precyzyjne, ale ³adniejsze :)
+                        planow±                        % ksi±?kowo :)
+to search               przeszukiw±
+                        poszukiw±
+                        szuk±
+to specify              okre¶liæ
+                        pod±
+to spool                buforow±                       % np. wydruki w kolejce
+                        sk³adow±
+                        odk³ad±
+                        przetrzymyw±
+to start                rozpocz±ae
+                        uruchomiae                       % np. program
+to supply               dostarcz±
+to support              obs³ugiw±
+                        wspier±
+to suppress             powstrzymyw±                   % np. "supress this behaviour"--"powstrzymaj to zachowanie"
+to swap                 wymieni±                       % jedno na drugie
+to toggle               prze³±cz±
+to trace                ¶ledziæ
+to trigger              poci±g±
+                        wywo³yw±
+to tune                 dostroiae
+to undo                 cofn±ae
+update                  od¶wie¿aæ
+                        aktualizowaæ
+to work around          przeciwdzia³aæ                  % zazwyczaj chodzi o jakie¶ usterki w programach
+token                   ¿eton
+                        token
+                        cecha                           % np. jakiego¶ ci±gu
+                        znacznik
+toolkit                 zestaw narzedzi
+total                   ca³kowity
+                        ogó³em
+truncation              obcinanie
+tuple                   krotka                          % np. para, trójka, czwórka, itd.
+unary                   jednoargumentowy
+union                   unia                            % struktura w jezykach programowania
+                        suma                            % w matematycznej teorii zbiorów
+unix domain             dziedzina uniksa                % nale?± tu specyficzne protoko³y
+valid                   prawid³owy
+                        odpowiedni
+variable                zmienna
+verbatim                dos³ownie
+verbose                 gadatliwy                       % np. gadatliwy tryb dzia³ania
+                        wymowny                         % niby bardziej poprawne, ale mniej zrozumia³e ;)
+vertical                pionowy
+vi-like                 vi-podobne                      % polecam u?yw± tej postaci do innych -like równie?.
+violation               naruszenie
+                        pogwa³cenie                     % ale nie kobiety ;>
+visual                  wizualny
+                        dostep do grafiki               % w X Window System jest to struktura danych, okre¶laj±ca takie rzeczy, jak np. g³ebia kolorów
+whitespace              bia³a spacja
+wide area network       sieæ rozleg³a                   % czyli WAN
+wildcard                maska                           % tj. znaki *, ?, etc.
+                        joker                           % tj. znaki *, ?, etc.
+window manager          mened¿er okien                  % tj. fvwm, afterstep, itp.
+workstation             stacja robocza
+write behind            pisanie z opó¼nieniem           % czyli buforowanie zapisu
+zombie process          proces duch
