@@ -8,9 +8,13 @@ License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
 Source1:	http://dsl.org/faq/fjd/journo-1.1.tar.gz
+# Source1-md5:	e7ee9a7694e5640cca02da993839771a
 Source2:	http://wiretap.area.com/Gopher/Library/Classic/devils.txt
+# Source2-md5:	56b2918934d8f1162ec0f711df8c9669
 Source3:	http://ptm.linux.pl/slownik
+# Source3-md5:	7edc21ffad074041097e9f9f0e2c2b15
 Source4:	http://www.prime-project.org/dict/dict-world02--2003-02-15.tar.gz
+# Source4-md5:	344bd453d17536e281f1874cfd318c7d
 URL:		http://www.dict.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
