@@ -3,7 +3,7 @@ Summary:	misc dictionaries for DICTD
 Summary(pl):	Ró¿ne s³owniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	6
+Release:	7
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -70,8 +70,9 @@ information, edited by Jay Kominek, for use by the dictionary server
 in the dictd package.
 
 %description -n dict-elements -l pl
-Ten pakiet zawiera bazê danych elementarnych informacji, przygotowan±
-przez Jaya Kominka, do u¿ywania z serwerem s³ownika dictd.
+Ten pakiet zawiera bazê danych informacji o pierwiastkach,
+przygotowan± przez Jaya Kominka, do u¿ywania z serwerem s³ownika
+dictd.
 
 %package -n dict-foldoc
 Summary:	foldoc dictionary for DICTD
