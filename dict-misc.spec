@@ -3,7 +3,7 @@ Summary:	misc dictionaries for DICTD
 Summary(pl):	Ró¿ne s³owniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -130,21 +130,6 @@ server in the dictd package.
 Ten pakiet zawiera s³ownik world95 do u¿ywania z serwerem s³ownika
 dictd.
 
-%package -n dict-fmt
-Summary:	Dict file formater for DICTD
-Summary(pl):	Obrabiarka plików dla dictda
-Group:		Applications/Dictionaries
-Requires:	%{_sysconfdir}/dictd
-Provides:	dictfmt
-
-%description -n dict-fmt
-This package contains dictfmt, util for formater for files used
-aferwards by the dictionary server from the dictd package.
-
-%description -n dict-fmt -l pl
-Narzêdzia do obróbki plików u¿ywanych pó¼niej przez serwer z pakietu
-dictd.
-
 %prep
 %setup -q -a1
 cp %{SOURCE2} ./
@@ -170,7 +155,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_datadir}/dictd/,%{_sysconfdir}/dictd,%{_bindir}}
 %{__make} install dictdir="$RPM_BUILD_ROOT%{_datadir}/dictd/"
 install journo.* devil.* $RPM_BUILD_ROOT%{_datadir}/dictd/
-install dictfmt $RPM_BUILD_ROOT%{_bindir}
 
 # jargon has separate package
 rm -f $RPM_BUILD_ROOT%{_datadir}/dictd/jargon.*
@@ -291,7 +275,3 @@ fi
 %defattr(644,root,root,755)
 %attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/world95.dictconf
 %{_datadir}/dictd/world95.*
-
-%files -n dict-fmt
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/dictfmt
