@@ -7,8 +7,8 @@ Release:	1
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
-Source1:	journo-1.1.tar.gz
-Source2:	http://wiretap.area.com/Gopher/Library/Classic/devils.txt
+Source1:	http://dsl.org/faq/fjd/journo-1.1.tar.gz
+Source2:    http://wiretap.area.com/Gopher/Library/Classic/devils.txt
 URL:		http://www.dict.org/
 BuildRequires:	autoconf
 BuildRequires:	dictzip
@@ -130,6 +130,20 @@ server in the dictd package.
 Ten pakiet zawiera s³ownik world95 do u¿ywania z serwerem s³ownika
 dictd.
 
+%package -n dict-fmt
+Summary:    Dict file formater for DICTD
+Summary(pl):    Obrabiarka plików dla dictda
+Group:      Applications/Dictionaries
+Requires:   %{_sysconfdir}/dictd
+Provides: dictfmt
+
+%description -n dict-fmt
+This package contains dictfmt, util for formater for files used aferwards
+by the dictionary server from the dictd package.
+
+%description -n dict-devil -l pl
+Narzêdzia do obróbki plików u¿ywanych pó¼niej przez serwer z pakietu dictd.
+
 %prep 
 %setup -q -a1 
 cp %{SOURCE2} ./
@@ -139,8 +153,10 @@ autoconf
 %configure 
 %{__make} db 
 
-mv journo-1.1/journalism.dict ./journalism.txt
-./dictfmt -f -u "http://dsl.org/lit/" -s Journalism journo < journalism.txt
+
+sed  -e 's/^[[:alpha:]]\{2,\}$/:&:/' < journo-1.1/journalism.dict \
+    > journalism.txt
+./dictfmt -j -u "http://dsl.org/lit/" -s Journalism journo < journalism.txt
 dictzip journo.dict
 
 sed  's/^[[:upper:]]\{2,\}/:&:/' ./devils.txt | ./dictfmt  \
@@ -151,11 +167,10 @@ dictzip devil.dict
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_datadir}/dictd/,%{_sysconfdir}/dictd}
-
+install -d $RPM_BUILD_ROOT{%{_datadir}/dictd/,%{_sysconfdir}/dictd,%{_bindir}}
 %{__make} install dictdir="$RPM_BUILD_ROOT%{_datadir}/dictd/"
-install journo.* $RPM_BUILD_ROOT%{_datadir}/dictd/
-install devil.* $RPM_BUILD_ROOT%{_datadir}/dictd/
+install journo.* devil.* $RPM_BUILD_ROOT%{_datadir}/dictd/
+install dictfmt $RPM_BUILD_ROOT%{_bindir}
 
 # jargon has separate package
 rm -f $RPM_BUILD_ROOT%{_datadir}/dictd/jargon.*
@@ -274,5 +289,9 @@ fi
 
 %files -n dict-world95
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/world95.dictconf
-%{_datadir}/dictd/world95.*
+%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/devil.dictconf
+%{_datadir}/dictd/devil.*
+ 
+%files -n dict-fmt
+%defattr(644,root,root,755)
+%{_bindir}/dictfmt
