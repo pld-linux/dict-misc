@@ -12,6 +12,7 @@ Source2:	http://wiretap.area.com/Gopher/Library/Classic/devils.txt
 Source3:	http://ptm.linux.pl/slownik
 URL:		http://www.dict.org/
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	dictfmt
 BuildRequires:	dictzip
 Requires:	dictd
@@ -160,6 +161,8 @@ cp %{SOURCE3} ./
 
 %build
 %{__autoconf}
+cp -f %{_datadir}/automake/install-sh .
+cp -f %{_datadir}/automake/config.sub .
 %configure
 %{__make} db
 
