@@ -10,11 +10,11 @@ Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
 URL:		http://www.dict.org/
 BuildRequires:	dictzip
 BuildRequires:	autoconf
-Requires:	dictd 
+Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%description 
+%description
 This package contains misc dictionaries for use by the dictionary
 server in the dictd package.
 
@@ -26,7 +26,7 @@ dictd.
 Summary:	hitchcock dictionary for DICTD
 Summary(pl):	S這wnik hitchcock dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd 
+Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-hitchcock
@@ -41,7 +41,7 @@ dictd.
 Summary:	world95 dictionary for DICTD
 Summary(pl):	S這wnik world95 dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd 
+Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-world95
@@ -56,7 +56,7 @@ dictd.
 Summary:	foldoc dictionary for DICTD
 Summary(pl):	S這wnik foldoc dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd 
+Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-foldoc
@@ -71,7 +71,7 @@ dictd.
 Summary:	easton dictionary for DICTD
 Summary(pl):	S這wnik easton dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd 
+Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-easton
@@ -86,7 +86,7 @@ dictd.
 Summary:	elements dictionary for DICTD
 Summary(pl):	S這wnik elements dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd 
+Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-elements
@@ -97,13 +97,13 @@ server in the dictd package.
 Ten pakiet zawiera s這wnik elements do u篡wania z serwerem s這wnika
 dictd.
 
-%prep 
+%prep
 %setup -q
 
 %build
 autoconf
-%configure 
-%{__make} db 
+%configure
+%{__make} db
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -118,7 +118,7 @@ dictprefix=%{_datadir}/dictd/$i
 echo "# Misc Dictionaries - $i
 database $i {
     data  \"$dictprefix.dict.dz\"
-    index \"$dictprefix.index\" 
+    index \"$dictprefix.index\"
 }" > $RPM_BUILD_ROOT%{_sysconfdir}/dictd/$i.dictconf
 done;
 
