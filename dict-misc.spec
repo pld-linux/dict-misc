@@ -6,8 +6,6 @@ Version:	1.5
 Release:	1
 License:	GPL
 Group:		Applications/Dictionaries
-Group(de):	Applikationen/Wörterbücher
-Group(pl):	Aplikacje/S³owniki
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
 URL:		http://www.dict.org/
 BuildRequires:	dictzip
@@ -28,8 +26,6 @@ dictd.
 Summary:	hitchcock dictionary for DICTD
 Summary(pl):	S³ownik hitchcock dla dictd
 Group:		Applications/Dictionaries
-Group(de):	Applikationen/Wörterbücher
-Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 
@@ -45,8 +41,6 @@ dictd.
 Summary:	world95 dictionary for DICTD
 Summary(pl):	S³ownik world95 dla dictd
 Group:		Applications/Dictionaries
-Group(de):	Applikationen/Wörterbücher
-Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 
@@ -62,8 +56,6 @@ dictd.
 Summary:	foldoc dictionary for DICTD
 Summary(pl):	S³ownik foldoc dla dictd
 Group:		Applications/Dictionaries
-Group(de):	Applikationen/Wörterbücher
-Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 
@@ -79,8 +71,6 @@ dictd.
 Summary:	easton dictionary for DICTD
 Summary(pl):	S³ownik easton dla dictd
 Group:		Applications/Dictionaries
-Group(de):	Applikationen/Wörterbücher
-Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 
@@ -96,8 +86,6 @@ dictd.
 Summary:	elements dictionary for DICTD
 Summary(pl):	S³ownik elements dla dictd
 Group:		Applications/Dictionaries
-Group(de):	Applikationen/Wörterbücher
-Group(pl):	Aplikacje/S³owniki
 Requires:	dictd 
 Requires:	%{_sysconfdir}/dictd
 
