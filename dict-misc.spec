@@ -79,8 +79,8 @@ przygotowan± przez Jaya Kominka, do u¿ywania z serwerem s³ownika
 dictd.
 
 %package -n dict-foldoc
-Summary:	foldoc dictionary for DICTD
-Summary(pl):	S³ownik foldoc dla dictd
+Summary:	The Free On-line Dictionary of Computing for DICTD
+Summary(pl):	Wolny s³ownik komputerów dla dictd
 Group:		Applications/Dictionaries
 Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
