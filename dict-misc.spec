@@ -101,7 +101,7 @@ dictd.
 %setup -q
 
 %build
-autoconf
+%{__autoconf}
 %configure
 %{__make} db
 
