@@ -174,10 +174,10 @@ dictzip devil.dict
 
 egrep -v "^#" slownik > slownik.1
 tr -d \[\] <slownik.1 > slownik.2
-sed  -e 's/^\([[:alnum:]]\{2,\}\)\ \ /:\1:/' < slownik.2 > slownik.3
-./dictfmt -j -u "http://ptm.linux.pl/slownik" -s PTM slownik  < slownik.3
-mv slownik.3 ptm
-dictzip ptm
+tr  êó±¶³¿¼æñ eoaslzzcn <slownik.2 > slownik.3
+sed  -e 's/^\([[:alnum:]]\{2,\}\)\ \ /:\1:/' < slownik.3 > slownik.4
+./dictfmt -j -u "http://ptm.linux.pl/slownik" -s "Projek Tlumaczenia Manuali" ptm  < slownik.4
+dictzip ptm.dict
 
 %install
 rm -rf $RPM_BUILD_ROOT
