@@ -3,7 +3,7 @@ Summary:	Miscellaneous dictionaries for DICTD
 Summary(pl):	Ró¿ne s³owniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	8
+Release:	9
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -177,7 +177,7 @@ egrep -v "^#" slownik > slownik.1
 tr -d \[\] <slownik.1 > slownik.2
 tr êó±¶³¿¼æñ eoaslzzcn <slownik.2 > slownik.3
 sed -e 's/^\([[:alnum:]]\{2,\}\)\ \ /:\1:/' < slownik.3 > slownik.4
-./dictfmt -j -u "http://ptm.linux.pl/slownik" -s "Projek Tlumaczenia Manuali" ptm < slownik.4
+./dictfmt -j -u "http://ptm.linux.pl/slownik" -s "Projekt Tlumaczenia Manuali" ptm < slownik.4
 dictzip ptm.dict
 
 %install
