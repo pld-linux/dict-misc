@@ -3,7 +3,7 @@ Summary:	misc dictionaries for DICTD
 Summary(pl):	R騜ne s這wniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -25,8 +25,8 @@ Ten pakiet zawiera r騜ne s這wniki do u篡wania z serwerem s這wnika
 dictd.
 
 %package -n dict-devil
-Summary:	Devils dictionary for DICTD
-Summary(pl):	S這wnik Devils dla dictd
+Summary:	Devil's dictionary for DICTD
+Summary(pl):	S這wnik Devil's Dictionary dla dictd
 Group:		Applications/Dictionaries
 Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
@@ -48,7 +48,7 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-easton
-This package contains easton dictionaries for use by the dicitonary
+This package contains easton dictionaries for use by the dictionary
 server in the dictd package.
 
 %description -n dict-easton -l pl
@@ -63,7 +63,7 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-elements
-This package contains elements dictionaries for use by the dicitonary
+This package contains elements dictionaries for use by the dictionary
 server in the dictd package.
 
 %description -n dict-elements -l pl
@@ -78,7 +78,7 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-foldoc
-This package contains foldoc dictionaries for use by the dicitonary
+This package contains foldoc dictionaries for use by the dictionary
 server in the dictd package.
 
 %description -n dict-foldoc -l pl
@@ -93,7 +93,7 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-hitchcock
-This package contains hitchcock dictionaries for use by the dicitonary
+This package contains hitchcock dictionaries for use by the dictionary
 server in the dictd package.
 
 %description -n dict-hitchcock -l pl
@@ -108,7 +108,7 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-journo
-This package contains journo dictionaries for use by the dicitonary
+This package contains journo dictionaries for use by the dictionary
 server in the dictd package.
 
 %description -n dict-journo -l pl
@@ -123,7 +123,7 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-world95
-This package contains world95 dictionaries for use by the dicitonary
+This package contains world95 dictionaries for use by the dictionary
 server in the dictd package.
 
 %description -n dict-world95 -l pl
