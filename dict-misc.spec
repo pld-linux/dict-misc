@@ -1,9 +1,9 @@
-%define         dictname misc
+%define		dictname misc
 Summary:	misc dictionaries for DICTD
 Summary(pl):	Ró¿ne s³owniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	5
+Release:	6
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -48,12 +48,14 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-easton
-This package contains easton dictionaries for use by the dictionary
-server in the dictd package.
+This package contains Easton's 1897 Bible Dictionary, based on M.G.
+Easton M.A., D.D.'s Illustrated Bible Dictionary, Third Edition,
+published by Thomas Nelson, 1897, for use by the dictionary server in
+the dictd package.
 
 %description -n dict-easton -l pl
-Ten pakiet zawiera s³ownik easton do u¿ywania z serwerem s³ownika
-dictd.
+Ten pakiet zawiera s³ownik Easton's 1897 Bible Dictionary do u¿ywania
+z serwerem s³ownika dictd.
 
 %package -n dict-elements
 Summary:	elements dictionary for DICTD
@@ -63,12 +65,13 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-elements
-This package contains elements dictionaries for use by the dictionary
-server in the dictd package.
+This package contains a freely-distributed database of elemental
+information, edited by Jay Kominek, for use by the dictionary server
+in the dictd package.
 
 %description -n dict-elements -l pl
-Ten pakiet zawiera s³ownik elements do u¿ywania z serwerem s³ownika
-dictd.
+Ten pakiet zawiera bazê danych elementarnych informacji, przygotowan±
+przez Jaya Kominka, do u¿ywania z serwerem s³ownika dictd.
 
 %package -n dict-foldoc
 Summary:	foldoc dictionary for DICTD
@@ -78,12 +81,12 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-foldoc
-This package contains foldoc dictionaries for use by the dictionary
-server in the dictd package.
+This package contains The Free On-line Dictionary of Computing for use
+by the dictionary server in the dictd package.
 
 %description -n dict-foldoc -l pl
-Ten pakiet zawiera s³ownik foldoc do u¿ywania z serwerem s³ownika
-dictd.
+Ten pakiet zawiera s³ownik The Free On-line Dictionary of Computing do
+u¿ywania z serwerem s³ownika dictd.
 
 %package -n dict-hitchcock
 Summary:	hitchcock dictionary for DICTD
@@ -93,12 +96,13 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-hitchcock
-This package contains hitchcock dictionaries for use by the dictionary
-server in the dictd package.
+This package contains Hitchcock's Bible Names Dictionary, derived from
+Hitchcock's New and Complete Analysis of the Holy Bible, published in
+the late 1800's, for use by the dictionary server in the dictd package.
 
 %description -n dict-hitchcock -l pl
-Ten pakiet zawiera s³ownik hitchcock do u¿ywania z serwerem s³ownika
-dictd.
+Ten pakiet zawiera s³ownik Hitchcock's Bible Names Dictionary do
+u¿ywania z serwerem s³ownika dictd.
 
 %package -n dict-journo
 Summary:	Journalism dictionary for DICTD
@@ -108,12 +112,12 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-journo
-This package contains journo dictionaries for use by the dictionary
-server in the dictd package.
+This package contains Free Journalism Dictionary for use by the
+dictionary server in the dictd package.
 
 %description -n dict-journo -l pl
-Ten pakiet zawiera s³ownik journo do u¿ywania z serwerem s³ownika
-dictd.
+Ten pakiet zawiera s³ownik Free Journalism Dictionary do u¿ywania z
+serwerem s³ownika dictd.
 
 %package -n dict-world95
 Summary:	world95 dictionary for DICTD
@@ -123,28 +127,28 @@ Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
 
 %description -n dict-world95
-This package contains world95 dictionaries for use by the dictionary
-server in the dictd package.
+This package contains The 1995 CIA World Factbook for use by the
+dictionary server in the dictd package.
 
 %description -n dict-world95 -l pl
-Ten pakiet zawiera s³ownik world95 do u¿ywania z serwerem s³ownika
-dictd.
+Ten pakiet zawiera s³ownik The 1995 CIA World Factbook do u¿ywania z
+serwerem s³ownika dictd.
 
 %prep
 %setup -q -a1
 cp %{SOURCE2} ./
 
 %build
-autoconf
+%{__autoconf}
 %configure
 %{__make} db
 
-sed  -e 's/^[[:alpha:]]\{2,\}$/:&:/' < journo-1.1/journalism.dict \
+sed -e 's/^[[:alpha:]]\{2,\}$/:&:/' < journo-1.1/journalism.dict \
 	> journalism.txt
 ./dictfmt -j -u "http://dsl.org/lit/" -s Journalism journo < journalism.txt
 dictzip journo.dict
 
-sed  's/^[[:upper:]]\{2,\}/:&:/' ./devils.txt | ./dictfmt  \
+sed 's/^[[:upper:]]\{2,\}/:&:/' ./devils.txt | ./dictfmt \
 	-j -u http://wiretap.area.com/Gopher/Library/Classic/devils.txt \
 	-s "The Devil's Dictionary (1881-1906)" devil
 
@@ -249,7 +253,7 @@ fi
 %files -n dict-easton
 %defattr(644,root,root,755)
 %attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/easton.dictconf
-%{_datadir}/dictd/easton*
+%{_datadir}/dictd/easton.*
 
 %files -n dict-elements
 %defattr(644,root,root,755)
@@ -264,7 +268,7 @@ fi
 %files -n dict-hitchcock
 %defattr(644,root,root,755)
 %attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/hitchcock.dictconf
-%{_datadir}/dictd/hitchcock*
+%{_datadir}/dictd/hitchcock.*
 
 %files -n dict-journo
 %defattr(644,root,root,755)
