@@ -3,7 +3,7 @@ Summary:	misc dictionaries for DICTD
 Summary(pl):	Ró¿ne s³owniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -141,7 +141,7 @@ Provides:	dictfmt
 This package contains dictfmt, util for formater for files used
 aferwards by the dictionary server from the dictd package.
 
-%description -n dict-devil -l pl
+%description -n dict-fmt -l pl
 Narzêdzia do obróbki plików u¿ywanych pó¼niej przez serwer z pakietu
 dictd.
 
@@ -289,8 +289,8 @@ fi
 
 %files -n dict-world95
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/devil.dictconf
-%{_datadir}/dictd/devil.*
+%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/world95.dictconf
+%{_datadir}/dictd/world95.*
 
 %files -n dict-fmt
 %defattr(644,root,root,755)
