@@ -85,7 +85,7 @@ dictd.
 
 %package -n dict-foldoc
 Summary:	The Free On-line Dictionary of Computing for DICTD
-Summary(pl):	Wolny s³ownik komputerów dla dictd
+Summary(pl):	Wolny s³ownik z dziedziny obliczeñ dla dictd
 Group:		Applications/Dictionaries
 Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
