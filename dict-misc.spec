@@ -19,8 +19,8 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dictfmt
 BuildRequires:	dictzip
-Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
+Requires:	dictd
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,8 +35,8 @@ dictd.
 Summary:	Devil's dictionary for DICTD
 Summary(pl):	S³ownik Devil's Dictionary dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
+Requires:	dictd
 
 %description -n dict-devil
 This package contains The Devil's Dictionary, a cynical and irreverent
@@ -51,8 +51,8 @@ opisy s³ów - do u¿ywania z serwerem s³ownika dictd.
 Summary:	Easton's dictionary for DICTD
 Summary(pl):	S³ownik Eastona dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
+Requires:	dictd
 
 %description -n dict-easton
 This package contains Easton's 1897 Bible Dictionary, based on M.G.
@@ -68,8 +68,8 @@ z serwerem s³ownika dictd.
 Summary:	Elements dictionary for DICTD
 Summary(pl):	S³ownik pierwiastków dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
+Requires:	dictd
 
 %description -n dict-elements
 This package contains a freely-distributed database of elemental
@@ -85,8 +85,8 @@ dictd.
 Summary:	The Free On-line Dictionary of Computing for DICTD
 Summary(pl):	Darmowy s³ownik z dziedziny obliczeñ dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
+Requires:	dictd
 
 %description -n dict-foldoc
 This package contains The Free On-line Dictionary of Computing for use
@@ -100,8 +100,8 @@ u¿ywania z serwerem s³ownika dictd.
 Summary:	Hitchcock's dictionary for DICTD
 Summary(pl):	S³ownik Hitchcocka dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
+Requires:	dictd
 
 %description -n dict-hitchcock
 This package contains Hitchcock's Bible Names Dictionary, derived from
@@ -117,8 +117,8 @@ u¿ywania z serwerem s³ownika dictd.
 Summary:	Journalism dictionary for DICTD
 Summary(pl):	S³ownik Journalism dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
+Requires:	dictd
 
 %description -n dict-journo
 This package contains Free Journalism Dictionary for use by the
@@ -132,8 +132,8 @@ serwerem s³ownika dictd.
 Summary:	PTM dictionary for DICTD
 Summary(pl):	S³ownik PTM dla dictd
 Group:		Applications/Dictionaries
-Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
+Requires:	dictd
 
 %description -n dict-ptm
 This package contains dictionary created by Projekt Tlumaczenia
@@ -148,8 +148,8 @@ Summary:	CIAworldbook dictionary for DICTD
 Summary(pl):	S³ownik CIAworldbook dla dictd
 Group:		Applications/Dictionaries
 URL:		http://www.prime-project.org/dict/
-Requires:	dictd
 Requires:	%{_sysconfdir}/dictd
+Requires:	dictd
 Obsoletes:	dict-world95
 
 %description -n dict-CIAworldbook
@@ -298,40 +298,40 @@ fi
 
 %files -n dict-devil
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/devil.dictconf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/dictd/devil.dictconf
 %{_datadir}/dictd/devil.*
 
 %files -n dict-easton
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/easton.dictconf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/dictd/easton.dictconf
 %{_datadir}/dictd/easton.*
 
 %files -n dict-elements
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/elements.dictconf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/dictd/elements.dictconf
 %{_datadir}/dictd/elements.*
 
 %files -n dict-foldoc
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/foldoc.dictconf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/dictd/foldoc.dictconf
 %{_datadir}/dictd/foldoc.*
 
 %files -n dict-hitchcock
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/hitchcock.dictconf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/dictd/hitchcock.dictconf
 %{_datadir}/dictd/hitchcock.*
 
 %files -n dict-journo
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/journo.dictconf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/dictd/journo.dictconf
 %{_datadir}/dictd/journo.*
 
 %files -n dict-ptm
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/ptm.dictconf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/dictd/ptm.dictconf
 %{_datadir}/dictd/ptm.*
 
 %files -n dict-CIAworldbook
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/world02.dictconf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/dictd/world02.dictconf
 %{_datadir}/dictd/world02.*
