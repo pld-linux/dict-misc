@@ -3,7 +3,7 @@ Summary:	Miscellaneous dictionaries for DICTD
 Summary(pl):	Ró¿ne s³owniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
-Release:	14
+Release:	15
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -11,9 +11,13 @@ Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
 Source1:	http://dsl.org/faq/fjd/journo-1.1.tar.gz
 # Source1-md5:	e7ee9a7694e5640cca02da993839771a
 Source2:	http://wiretap.area.com/Gopher/Library/Classic/devils.txt
+# Source2-md5:	56b2918934d8f1162ec0f711df8c9669
 Source3:	http://ptm.linux.pl/slownik
+# Source3-md5:	7edc21ffad074041097e9f9f0e2c2b15
 Source4:	http://www.prime-project.org/dict/dict-world02--2003-02-15.tar.gz
 # Source4-md5:	344bd453d17536e281f1874cfd318c7d
+Source5:	http://foldoc.org/foldoc/Dictionary.gz
+# Source5-md5:	c93dcdd00ac3ba1436ffe3cff2a27493
 URL:		http://www.dict.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -164,6 +168,7 @@ serwerem s³ownika dictd.
 %setup -q -a1 -a4
 cp %{SOURCE2} ./
 cp %{SOURCE3} ./
+zcat %{SOURCE5} > data/Dictionary
 
 %build
 %{__autoconf}
@@ -217,84 +222,52 @@ done;
 rm -rf $RPM_BUILD_ROOT
 
 %post -n dict-devil
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2
-fi
+%service dictd restart
 
 %postun -n dict-devil
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2 || true
-fi
+%service dictd restart
 
 %post -n dict-easton
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2
-fi
+%service dictd restart
 
 %postun -n dict-easton
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2 || true
-fi
+%service dictd restart
 
 %post -n dict-elements
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2
-fi
+%service dictd restart
 
 %postun -n dict-elements
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2 || true
-fi
+%service dictd restart
 
 %post -n dict-foldoc
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2
-fi
+%service dictd restart
 
 %postun -n dict-foldoc
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2 || true
-fi
+%service dictd restart
 
 %post -n dict-hitchcock
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2
-fi
+%service dictd restart
 
 %postun -n dict-hitchcock
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2 || true
-fi
+%service dictd restart
 
 %post -n dict-journo
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2
-fi
+%service dictd restart
 
 %postun -n dict-journo
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2
-fi
+%service dictd restart
 
 %post -n dict-ptm
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2
-fi
+%service dictd restart
 
 %postun -n dict-ptm
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2
-fi
+%service dictd restart
 
 %post -n dict-CIAworldbook
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2
-fi
+%service dictd restart
 
 %postun -n dict-CIAworldbook
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2 || true
-fi
+%service dictd restart
 
 %files -n dict-devil
 %defattr(644,root,root,755)
