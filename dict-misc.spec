@@ -166,8 +166,8 @@ serwerem s³ownika dictd.
 
 %prep
 %setup -q -a1 -a4
-cp %{SOURCE2} ./
-cp %{SOURCE3} ./
+cp %{SOURCE2} .
+cp %{SOURCE3} .
 zcat %{SOURCE5} > data/Dictionary
 
 %build
