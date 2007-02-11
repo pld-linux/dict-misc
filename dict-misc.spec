@@ -186,7 +186,6 @@ sed 's/^[[:upper:]]\{2,\}/:&:/' devils.txt | \
 	-s "The Devil's Dictionary (1881-1906)" devil
 dictzip devil.dict
 
-#egrep -v "^#" slownik | tr -d \[\] | tr êó±¶³¿¼æñ eoaslzzcn | \
 egrep -v "^#" slownik | tr -d \[\] | \
 	sed 's/^\([[:alnum:]]\{2,\}\)\ \ /:\1:/' | \
 	dictfmt -j -u "http://ptm.linux.pl/slownik" \
