@@ -1,6 +1,6 @@
 %define		dictname misc
 Summary:	Miscellaneous dictionaries for DICTD
-Summary(pl.UTF-8):   Różne słowniki dla dictd
+Summary(pl.UTF-8):	Różne słowniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
 Release:	15
@@ -37,7 +37,7 @@ dictd.
 
 %package -n dict-devil
 Summary:	Devil's dictionary for DICTD
-Summary(pl.UTF-8):   Słownik Devil's Dictionary dla dictd
+Summary(pl.UTF-8):	Słownik Devil's Dictionary dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -53,7 +53,7 @@ opisy słów - do używania z serwerem słownika dictd.
 
 %package -n dict-easton
 Summary:	Easton's dictionary for DICTD
-Summary(pl.UTF-8):   Słownik Eastona dla dictd
+Summary(pl.UTF-8):	Słownik Eastona dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -70,7 +70,7 @@ z serwerem słownika dictd.
 
 %package -n dict-elements
 Summary:	Elements dictionary for DICTD
-Summary(pl.UTF-8):   Słownik pierwiastków dla dictd
+Summary(pl.UTF-8):	Słownik pierwiastków dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -87,7 +87,7 @@ dictd.
 
 %package -n dict-foldoc
 Summary:	The Free On-line Dictionary of Computing for DICTD
-Summary(pl.UTF-8):   Darmowy słownik z dziedziny obliczeń dla dictd
+Summary(pl.UTF-8):	Darmowy słownik z dziedziny obliczeń dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -102,7 +102,7 @@ używania z serwerem słownika dictd.
 
 %package -n dict-hitchcock
 Summary:	Hitchcock's dictionary for DICTD
-Summary(pl.UTF-8):   Słownik Hitchcocka dla dictd
+Summary(pl.UTF-8):	Słownik Hitchcocka dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -119,7 +119,7 @@ używania z serwerem słownika dictd.
 
 %package -n dict-journo
 Summary:	Journalism dictionary for DICTD
-Summary(pl.UTF-8):   Słownik Journalism dla dictd
+Summary(pl.UTF-8):	Słownik Journalism dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -134,7 +134,7 @@ serwerem słownika dictd.
 
 %package -n dict-ptm
 Summary:	PTM dictionary for DICTD
-Summary(pl.UTF-8):   Słownik PTM dla dictd
+Summary(pl.UTF-8):	Słownik PTM dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -149,7 +149,7 @@ serwerem dictd.
 
 %package -n dict-CIAworldbook
 Summary:	CIAworldbook dictionary for DICTD
-Summary(pl.UTF-8):   Słownik CIAworldbook dla dictd
+Summary(pl.UTF-8):	Słownik CIAworldbook dla dictd
 Group:		Applications/Dictionaries
 URL:		http://www.prime-project.org/dict/
 Requires:	%{_sysconfdir}/dictd
