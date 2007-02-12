@@ -1,6 +1,6 @@
 %define		dictname misc
 Summary:	Miscellaneous dictionaries for DICTD
-Summary(pl):	RÛøne s≥owniki dla dictd
+Summary(pl.UTF-8):   R√≥≈ºne s≈Çowniki dla dictd
 Name:		dict-%{dictname}
 Version:	1.5
 Release:	15
@@ -31,13 +31,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package contains misc dictionaries for use by the dictionary
 server in the dictd package.
 
-%description -l pl
-Ten pakiet zawiera rÛøne s≥owniki do uøywania z serwerem s≥ownika
+%description -l pl.UTF-8
+Ten pakiet zawiera r√≥≈ºne s≈Çowniki do u≈ºywania z serwerem s≈Çownika
 dictd.
 
 %package -n dict-devil
 Summary:	Devil's dictionary for DICTD
-Summary(pl):	S≥ownik Devil's Dictionary dla dictd
+Summary(pl.UTF-8):   S≈Çownik Devil's Dictionary dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -47,13 +47,13 @@ This package contains The Devil's Dictionary, a cynical and irreverent
 dictionary of common words, formatted for use by the dictionary server
 in the dictd package.
 
-%description -n dict-devil -l pl
-S≥ownik The Devil's Dictionary, zawieraj±cy cyniczne i lekcewaø±ce
-opisy s≥Ûw - do uøywania z serwerem s≥ownika dictd.
+%description -n dict-devil -l pl.UTF-8
+S≈Çownik The Devil's Dictionary, zawierajƒÖcy cyniczne i lekcewa≈ºƒÖce
+opisy s≈Ç√≥w - do u≈ºywania z serwerem s≈Çownika dictd.
 
 %package -n dict-easton
 Summary:	Easton's dictionary for DICTD
-Summary(pl):	S≥ownik Eastona dla dictd
+Summary(pl.UTF-8):   S≈Çownik Eastona dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -64,13 +64,13 @@ Easton M.A., D.D.'s Illustrated Bible Dictionary, Third Edition,
 published by Thomas Nelson, 1897, for use by the dictionary server in
 the dictd package.
 
-%description -n dict-easton -l pl
-Ten pakiet zawiera s≥ownik Easton's 1897 Bible Dictionary do uøywania
-z serwerem s≥ownika dictd.
+%description -n dict-easton -l pl.UTF-8
+Ten pakiet zawiera s≈Çownik Easton's 1897 Bible Dictionary do u≈ºywania
+z serwerem s≈Çownika dictd.
 
 %package -n dict-elements
 Summary:	Elements dictionary for DICTD
-Summary(pl):	S≥ownik pierwiastkÛw dla dictd
+Summary(pl.UTF-8):   S≈Çownik pierwiastk√≥w dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -80,14 +80,14 @@ This package contains a freely-distributed database of elemental
 information, edited by Jay Kominek, for use by the dictionary server
 in the dictd package.
 
-%description -n dict-elements -l pl
-Ten pakiet zawiera bazÍ danych informacji o pierwiastkach,
-przygotowan± przez Jaya Kominka, do uøywania z serwerem s≥ownika
+%description -n dict-elements -l pl.UTF-8
+Ten pakiet zawiera bazƒô danych informacji o pierwiastkach,
+przygotowanƒÖ przez Jaya Kominka, do u≈ºywania z serwerem s≈Çownika
 dictd.
 
 %package -n dict-foldoc
 Summary:	The Free On-line Dictionary of Computing for DICTD
-Summary(pl):	Darmowy s≥ownik z dziedziny obliczeÒ dla dictd
+Summary(pl.UTF-8):   Darmowy s≈Çownik z dziedziny oblicze≈Ñ dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -96,13 +96,13 @@ Requires:	dictd
 This package contains The Free On-line Dictionary of Computing for use
 by the dictionary server in the dictd package.
 
-%description -n dict-foldoc -l pl
-Ten pakiet zawiera s≥ownik The Free On-line Dictionary of Computing do
-uøywania z serwerem s≥ownika dictd.
+%description -n dict-foldoc -l pl.UTF-8
+Ten pakiet zawiera s≈Çownik The Free On-line Dictionary of Computing do
+u≈ºywania z serwerem s≈Çownika dictd.
 
 %package -n dict-hitchcock
 Summary:	Hitchcock's dictionary for DICTD
-Summary(pl):	S≥ownik Hitchcocka dla dictd
+Summary(pl.UTF-8):   S≈Çownik Hitchcocka dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -113,13 +113,13 @@ Hitchcock's New and Complete Analysis of the Holy Bible, published in
 the late 1800's, for use by the dictionary server in the dictd
 package.
 
-%description -n dict-hitchcock -l pl
-Ten pakiet zawiera s≥ownik Hitchcock's Bible Names Dictionary do
-uøywania z serwerem s≥ownika dictd.
+%description -n dict-hitchcock -l pl.UTF-8
+Ten pakiet zawiera s≈Çownik Hitchcock's Bible Names Dictionary do
+u≈ºywania z serwerem s≈Çownika dictd.
 
 %package -n dict-journo
 Summary:	Journalism dictionary for DICTD
-Summary(pl):	S≥ownik Journalism dla dictd
+Summary(pl.UTF-8):   S≈Çownik Journalism dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -128,13 +128,13 @@ Requires:	dictd
 This package contains Free Journalism Dictionary for use by the
 dictionary server in the dictd package.
 
-%description -n dict-journo -l pl
-Ten pakiet zawiera s≥ownik Free Journalism Dictionary do uøywania z
-serwerem s≥ownika dictd.
+%description -n dict-journo -l pl.UTF-8
+Ten pakiet zawiera s≈Çownik Free Journalism Dictionary do u≈ºywania z
+serwerem s≈Çownika dictd.
 
 %package -n dict-ptm
 Summary:	PTM dictionary for DICTD
-Summary(pl):	S≥ownik PTM dla dictd
+Summary(pl.UTF-8):   S≈Çownik PTM dla dictd
 Group:		Applications/Dictionaries
 Requires:	%{_sysconfdir}/dictd
 Requires:	dictd
@@ -143,13 +143,13 @@ Requires:	dictd
 This package contains dictionary created by Projekt Tlumaczenia
 Manuali for use by the dicitonary server in the dictd package.
 
-%description -n dict-ptm -l pl
-Ten pakiet zawiera s≥ownik Projektu T≥umaczenia Manuali, do uøycia z
+%description -n dict-ptm -l pl.UTF-8
+Ten pakiet zawiera s≈Çownik Projektu T≈Çumaczenia Manuali, do u≈ºycia z
 serwerem dictd.
 
 %package -n dict-CIAworldbook
 Summary:	CIAworldbook dictionary for DICTD
-Summary(pl):	S≥ownik CIAworldbook dla dictd
+Summary(pl.UTF-8):   S≈Çownik CIAworldbook dla dictd
 Group:		Applications/Dictionaries
 URL:		http://www.prime-project.org/dict/
 Requires:	%{_sysconfdir}/dictd
@@ -160,9 +160,9 @@ Obsoletes:	dict-world95
 This package contains The 2002 CIA World Factbook for use by the
 dictionary server in the dictd package.
 
-%description -n dict-CIAworldbook -l pl
-Ten pakiet zawiera s≥ownik The 2002 CIA World Factbook do uøywania z
-serwerem s≥ownika dictd.
+%description -n dict-CIAworldbook -l pl.UTF-8
+Ten pakiet zawiera s≈Çownik The 2002 CIA World Factbook do u≈ºywania z
+serwerem s≈Çownika dictd.
 
 %prep
 %setup -q -a1 -a4
