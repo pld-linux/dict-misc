@@ -1,0 +1,12 @@
+diff -Nur dict-misc-1.5.orig/dictfmt.c dict-misc-1.5.chng/dictfmt.c
+--- dict-misc-1.5.orig/dictfmt.c	1998-07-06 03:33:40.000000000 +0200
++++ dict-misc-1.5.chng/dictfmt.c	2007-05-11 21:23:20.000000000 +0200
+@@ -464,7 +464,7 @@
+       }
+       fmt_string(buf);
+       fmt_newline();
+- skip:
++ skip: ;
+    }
+    
+    fmt_newheadword(NULL,0);
