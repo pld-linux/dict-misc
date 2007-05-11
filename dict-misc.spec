@@ -18,6 +18,7 @@ Source4:	http://www.prime-project.org/dict/dict-world02--2003-02-15.tar.gz
 # Source4-md5:	344bd453d17536e281f1874cfd318c7d
 Source5:	http://foldoc.org/foldoc/Dictionary.gz
 # Source5-md5:	c93dcdd00ac3ba1436ffe3cff2a27493
+Patch0:		%{name}-gcc.patch
 URL:		http://www.dict.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -166,6 +167,7 @@ serwerem słownika dictd.
 
 %prep
 %setup -q -a1 -a4
+%patch0 -p1
 cp %{SOURCE2} .
 cp %{SOURCE3} .
 zcat %{SOURCE5} > data/Dictionary
